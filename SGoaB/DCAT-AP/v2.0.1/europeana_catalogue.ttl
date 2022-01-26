@@ -1,0 +1,163 @@
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix adms:   <http://www.w3.org/ns/adms> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix :       <http://data.europeana.eu> .
+
+<#catalog>
+  a dcat:Catalog ;
+  dct:description "The catalogue of all cultural heritage datasets aggregated by Europeana"@en ;
+  dct:publisher <http://data.europeana.eu/organization/1482250000001617026> ;
+  dct:title "Europeana Datasets"@en ;
+  foaf:homepage <https://www.europeana.eu/> ;
+  dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+  dct:issued "2021-03-05"^^xsd:date ;
+  dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> ;
+  dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
+  dct:modified "2021-03-05"^^xsd:date ;
+  dct:creator <http://data.europeana.eu/organization/1482250000001617026> ;
+  dcat:dataset [
+    a dcat:Dataset ;
+    dct:description "A dataset containing metadata descriptions of cultural heritage digital objects from, and about, Europe. The dataset aggregates metadata from more than 4000 cultural heritage institutions."@en ;
+    dct:title "Europeana Aggregated Dataset of Cultural Heritage Digital Objects"@en ;
+    dct:publisher <http://data.europeana.eu/organization/1482250000001617026> ;
+    dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+    dct:creator <http://data.europeana.eu/organization/1482250000001617026> ;
+    dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
+    dct:issued "2008-11-20"^^xsd:date ;
+    dcat:distribution [
+      a dcat:Distribution ;
+      dcat:accessURL <http://sparql.europeana.eu/> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable>;
+      dct:description "Data access via the Europeana SPARQL API"@en ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dcat:landingPage <https://pro.europeana.eu/page/sparql> ;
+      dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.w3.org/TR/sparql11-query/> ;
+      adms:status <http://purl.org/adms/status/UnderDevelopment> ;    
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <http://sparql.europeana.eu/> ;
+        dct:title "Europeana SPARQL API" ;
+        dct:description "The SPARQL API of Europeana APIs allows exploring connections between Europeana data and outside data sources, like VIAF, Iconclass, Getty Vocabularies (AAT), Geonames, Wikidata, and DBPedia. It allows one to delve into the structured metadata of Europeana (for instance, to ask the question \"What are all the French 18th-century painters with at least five artworks available through Europeana\")"@en 
+      ]
+    ],
+    [
+      a dcat:Distribution ;
+      dcat:accessURL <https://api.europeana.eu/oai/record/> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:description "Data access via the Europeana OAI-PMH service."@en ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dcat:landingPage <https://pro.europeana.eu/page/oai-pmh-service> ;
+      dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.openarchives.org/OAI/2.0/> ;
+      adms:status <http://purl.org/adms/status/Completed> ;
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <https://api.europeana.eu/oai/record/> ;
+        dct:title "Europeana OAI-PMH Service" ;
+        dct:description "The Europeana OAI-PMH service offers a way to collect large amounts of Europeana data from our repository. The OAI-PMH protocol allows you to harvest the entirety, a selection, or all of Europeana metadata so that it can be integrated into other services or applications."@en 
+      ]
+    ],
+    [
+      a dcat:Distribution ;
+      dcat:accessURL <https://www.europeana.eu/api/v2/search.json> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:description "Data access via the Europeana Search API."@en ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dcat:landingPage <https://pro.europeana.eu/page/search> ;
+      adms:status <http://purl.org/adms/status/Completed> ;
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <https://www.europeana.eu/api/v2/search.json> ;
+        dct:title "Europeana Search API" ;
+        dct:description "The Search API is the easiest Europeana API to use and understand. It interacts with Europeana's data in much the same way as the Europeana Collections does. You can search for keywords, and the API will return all records that match that keyword. You can refine your search with more advanced queries like Boolean Searches, or you can filter out parts of the results advanced filtering. You can choose to only return objects which have certain copyright statements, and you can choose to return the results in a language of your choice."@en 
+      ]
+    ],
+    [
+      a dcat:Distribution ;
+      dcat:accessURL <https://api.europeana.eu/record/> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:description "Data access via the Europeana Record API."@en ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dcat:landingPage <https://pro.europeana.eu/page/record> ;
+      dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
+      adms:status <http://purl.org/adms/status/Completed> ;
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <https://api.europeana.eu/record/> ;
+        dct:title "Europeana Record API" ;
+        dct:description "The Record API provides direct access to the Europeana data, which is modeled using EDM. While EDM is an open flexible data model featuring various kinds of resources and relations between them, the Record API (and the Europeana Collections Portal) supports the retrieval of a segment of EDM for practical purposes (a subgraph, to use strict terminology). These \"atomic\" EDM segments usually contain one Cultural Heritage Object (CHO), the aggregation information which connects the metadata and the digital representations together and a number of contextual resources such as the agents, places, concepts and time pertaining to the CHO."@en 
+      ]
+    ],
+    [
+      a dcat:Distribution ;
+      dcat:accessURL <ftp://download.europeana.eu/dataset/XML/> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:description "Data access via the Europeana RDF-XML Data dumps."@en ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/rdf+xml> ;
+      dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
+      adms:status <http://purl.org/adms/status/Completed>
+    ],
+    [
+      a dcat:Distribution ;
+      dcat:accessURL <ftp://download.europeana.eu/dataset/TTL/> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:description "Data access via the Europeana RDF Turtle Data dumps."@en ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
+      dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
+      adms:status <http://purl.org/adms/status/Completed>
+    ]
+  ] .
+
+<http://data.europeana.eu/organization/1482250000001617026> a foaf:Agent ;
+  foaf:name "Europeana Foundation"@en, "Stichting Europeana"@nl ;
+  dct:type <http://purl.org/adms/publishertype/NonProfitOrganisation> .
+
+<http://creativecommons.org/publicdomain/zero/1.0/>
+  a dct:LicenseDocument ;
+  dct:type <http://purl.org/adms/licencetype/PublicDomain> .
+  
+<http://www.europeana.eu/schemas/edm/>  
+  a dct:Standard .
+
+<http://www.w3.org/TR/sparql11-query/>  
+  a dct:Standard .
+  
+<http://www.openarchives.org/OAI/2.0/>
+  a dct:Standard .
+
+<http://publications.europa.eu/resource/authority/continent/EUROPE>  
+  a dct:Location .
+	
+<https://www.europeana.eu/>  
+  a foaf:Document .
+  
+<https://www.iana.org/assignments/media-types/text/turtle>
+  a dct:MediaType .
+  
+<https://www.iana.org/assignments/media-types/application/zip>  
+  a dct:MediaType .
+  
+<https://www.iana.org/assignments/media-types/application/rdf+xml>
+  a dct:MediaType .
+
+<http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>
+  a dct:MediaTypeOrExtent .
+
+<http://publications.europa.eu/resource/authority/file-type/RDF_XML>
+  a dct:MediaTypeOrExtent  .
+  
+  
+  
+  
