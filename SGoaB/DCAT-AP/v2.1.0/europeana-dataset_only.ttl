@@ -23,7 +23,7 @@
       a dcat:Distribution ;
       dcat:accessURL <http://sparql.europeana.eu/> ;
       dcatap:availability <http://data.europa.eu/r5r/stable>;
-      dct:description "Data access via the Europeana SPARQL API"@en ;
+      dct:title "Access to the Europeana dataset via the Europeana SPARQL API"@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
       foaf:page <https://pro.europeana.eu/page/sparql> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.w3.org/TR/sparql11-query/> ;
@@ -39,7 +39,7 @@
       a dcat:Distribution ;
       dcat:accessURL <https://api.europeana.eu/oai/record/> ;
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
-      dct:description "Data access via the Europeana OAI-PMH service."@en ;
+      dct:title "Access to the Europeana dataset via the Europeana OAI-PMH service"@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
       foaf:page <https://pro.europeana.eu/page/oai-pmh-service> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.openarchives.org/OAI/2.0/> ;
@@ -55,7 +55,7 @@
       a dcat:Distribution ;
       dcat:accessURL <https://www.europeana.eu/api/v2/search.json> ;
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
-      dct:description "Data access via the Europeana Search API."@en ;
+      dct:title "Access to the Europeana dataset via the Europeana Search API"@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
       foaf:page <https://pro.europeana.eu/page/search> ;
       adms:status <http://purl.org/adms/status/Completed> ;
@@ -70,7 +70,7 @@
       a dcat:Distribution ;
       dcat:accessURL <https://api.europeana.eu/record/> ;
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
-      dct:description "Data access via the Europeana Record API."@en ;
+      dct:title "Access to the Europeana dataset via the Europeana Record API"@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
       foaf:page <https://pro.europeana.eu/page/record> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
@@ -86,7 +86,7 @@
       a dcat:Distribution ;
       dcat:accessURL <ftp://download.europeana.eu/dataset/XML/> ;
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
-      dct:description "Data access via the Europeana RDF-XML Data dumps."@en ;
+      dct:title "Data dumps of the Europeana dataset in RDF-XML"@en ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
@@ -99,7 +99,7 @@
       a dcat:Distribution ;
       dcat:accessURL <ftp://download.europeana.eu/dataset/TTL/> ;
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
-      dct:description "Data access via the Europeana RDF Turtle Data dumps."@en ;
+      dct:title "Data dumps of the Europeana dataset in RDF Turtle"@en ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
@@ -167,16 +167,26 @@
   skos:inScheme <http://purl.org/adms/publishertype/1.0> .
   
 <https://pro.europeana.eu/page/sparql>   
-  a foaf:Document .
+  a foaf:Document ;
+  dct:title "Documentation of the Europeana SPARQL API"@en ; 
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
 
 <https://pro.europeana.eu/page/record>  
-  a foaf:Document .
+  a foaf:Document ;
+  dct:title "Documentation of the Europeana Record API"@en ; 
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
 
 <https://pro.europeana.eu/page/search>
-  a foaf:Document .
+  a foaf:Document ;
+  dct:title "Documentation of the Europeana Search API"@en ; 
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
 
 <https://pro.europeana.eu/page/oai-pmh-service>
-  a foaf:Document .
+  a foaf:Document ;
+  dct:title "Documentation of the Europeana OAI-PMH API"@en ; 
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
   
 <https://pro.europeana.eu/page/harvesting-and-downloads#downloads>  
-  a foaf:Document .
+  a foaf:Document ;
+  dct:title "Instructions for downloading the Europeana dataset"@en ; 
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
