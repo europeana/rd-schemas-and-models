@@ -19,13 +19,13 @@
     dct:creator <http://data.europeana.eu/organization/1482250000001617026> ;
     dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
     dct:issued "2008-11-20"^^xsd:date ;
+    foaf:page <https://pro.europeana.eu/page/sparql> , <https://pro.europeana.eu/page/oai-pmh-service> , <https://pro.europeana.eu/page/search> , <https://pro.europeana.eu/page/record> , <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> , <https://pro.europeana.eu/page/edm-documentation> ;  
     dcat:distribution [
       a dcat:Distribution ;
       dcat:accessURL <http://sparql.europeana.eu/> ;
       dcatap:availability <http://data.europa.eu/r5r/stable>;
       dct:title "Access to the Europeana dataset via the Europeana SPARQL API"@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-      foaf:page <https://pro.europeana.eu/page/sparql> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.w3.org/TR/sparql11-query/> ;
       adms:status <http://purl.org/adms/status/UnderDevelopment> ;    
       dcat:accessService [
@@ -41,7 +41,6 @@
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
       dct:title "Access to the Europeana dataset via the Europeana OAI-PMH service"@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-      foaf:page <https://pro.europeana.eu/page/oai-pmh-service> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.openarchives.org/OAI/2.0/> ;
       adms:status <http://purl.org/adms/status/Completed> ;
       dcat:accessService [
@@ -57,13 +56,12 @@
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
       dct:title "Access to the Europeana dataset via the Europeana Search API"@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-      foaf:page <https://pro.europeana.eu/page/search> ;
       adms:status <http://purl.org/adms/status/Completed> ;
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <https://www.europeana.eu/api/v2/search.json> ;
         dct:title "Europeana Search API" ;
-        dct:description "The Search API is the easiest Europeana API to use and understand. It interacts with Europeana's data in much the same way as the Europeana Collections does. You can search for keywords, and the API will return all records that match that keyword. You can refine your search with more advanced queries like Boolean Searches, or you can filter out parts of the results advanced filtering. You can choose to only return objects which have certain copyright statements, and you can choose to return the results in a language of your choice."@en 
+        dct:description "The Search API interacts with Europeana's data in much the same way as the Europeana Collections does. You can search for keywords, and the API will return all records that match that keyword. You can refine your search with more advanced queries like Boolean Searches, or you can filter out parts of the results advanced filtering. You can choose to only return objects which have certain copyright statements, and you can choose to return the results in a language of your choice."@en 
       ]
     ],
     [
@@ -72,7 +70,6 @@
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
       dct:title "Access to the Europeana dataset via the Europeana Record API"@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-      foaf:page <https://pro.europeana.eu/page/record> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
       adms:status <http://purl.org/adms/status/Completed> ;
       dcat:accessService [
@@ -92,7 +89,6 @@
       dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/application/rdf+xml> ;
       dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
-	  foaf:page <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> ;
       adms:status <http://purl.org/adms/status/Completed>
     ],
     [
@@ -105,7 +101,6 @@
       dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
       dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
-	  foaf:page <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> ;
       adms:status <http://purl.org/adms/status/Completed>
     ] .
 
@@ -143,12 +138,19 @@
   
 <https://www.iana.org/assignments/media-types/application/rdf+xml>
   a dct:MediaType .
-
+  
+<http://www.iana.org/assignments/media-types/text/html>
+  a dct:MediaType .  
+  
 <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>
   a dct:MediaTypeOrExtent ;
   skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
 
 <http://publications.europa.eu/resource/authority/file-type/RDF_XML>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+  
+<http://publications.europa.eu/resource/authority/file-type/HTML>   
   a dct:MediaTypeOrExtent ;
   skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
     
@@ -168,25 +170,57 @@
   
 <https://pro.europeana.eu/page/sparql>   
   a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/sparql" ;
   dct:title "Documentation of the Europeana SPARQL API"@en ; 
+  dct:description "The SPARQL API is different from the other Europeana APIs in that it allows you to explore connections between Europeana data and outside data sources, like VIAF, Iconclass, Getty Vocabularies (AAT), Geonames, Wikidata, and DBPedia. If you are looking for a way to delve into the structured metadata of Europeana (for instance, to ask the question "What are all the French 18th-century painters with at least five artworks available through Europeana'), this is the API for you."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
   dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
 
 <https://pro.europeana.eu/page/record>  
   a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/record" ;
   dct:title "Documentation of the Europeana Record API"@en ; 
+  dct:description "Description of the requests and responses of the JSON-based Europeana Record API.'"@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
   dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
 
 <https://pro.europeana.eu/page/search>
   a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/search" ;
   dct:title "Documentation of the Europeana Search API"@en ; 
+  dct:description "Description of the requests and responses of the JSON-based Europeana Search API.'"@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
   dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
 
 <https://pro.europeana.eu/page/oai-pmh-service>
   a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/oai-pmh-service" ;
   dct:title "Documentation of the Europeana OAI-PMH API"@en ; 
+  dct:description "Instructions for harvesting the entirety, or a selection per dataset, or date of creation/modification, of all Europeana metadata so that it can be integrated into other services or applications."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
   dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
   
 <https://pro.europeana.eu/page/harvesting-and-downloads#downloads>  
   a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/harvesting-and-downloads#downloads" ;
   dct:title "Instructions for downloading the Europeana dataset"@en ; 
+  dct:description "Instruction for accessing the repository containing file exports of the Europeana dataset."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
   dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
+<https://pro.europeana.eu/page/edm-documentation>
+  a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/edm-documentation" ;
+  dct:title "Documentation about the Europeana Data Model"@en ; 
+  dct:description "This webpage list all the documentation resources required for creating and using data in the Europeana Data Model format."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
+
+
