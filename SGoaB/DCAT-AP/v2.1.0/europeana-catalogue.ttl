@@ -75,7 +75,7 @@
         a dcat:DataService;
         dcat:endpointURL <https://api.europeana.eu/record/v2/search.json> ;
         dct:title "Europeana Search API" ;
-        dct:description "The Search API is the easiest Europeana API to use and understand. It interacts with Europeana's data in much the same way as the Europeana Collections does. You can search for keywords, and the API will return all records that match that keyword. You can refine your search with more advanced queries like Boolean Searches, or you can filter out parts of the results advanced filtering. You can choose to only return objects which have certain copyright statements, and you can choose to return the results in a language of your choice."@en 
+        dct:description "The Search API is the easiest Europeana API to use and understand. It interacts with Europeana's data in much the same way as the Europeana website does. You can search for keywords, and the API will return all records that match that keyword. You can refine your search with more advanced queries like Boolean Searches, or you can filter out parts of the results advanced filtering. You can choose to only return objects which have certain copyright statements, and you can choose to return the results in a language of your choice."@en 
       ]
     ],
     [
@@ -91,7 +91,7 @@
         a dcat:DataService;
         dcat:endpointURL <https://api.europeana.eu/record/> ;
         dct:title "Europeana Record API" ;
-        dct:description "The Record API provides direct access to the Europeana data, which is modeled using EDM. While EDM is an open flexible data model featuring various kinds of resources and relations between them, the Record API (and the Europeana Collections Portal) supports the retrieval of a segment of EDM for practical purposes (a subgraph, to use strict terminology). These \"atomic\" EDM segments usually contain one Cultural Heritage Object (CHO), the aggregation information which connects the metadata and the digital representations together and a number of contextual resources such as the agents, places, concepts and time pertaining to the CHO."@en 
+        dct:description "The Record API provides direct access to the Europeana data, which is modeled using EDM. While EDM is an open flexible data model featuring various kinds of resources and relations between them, the Record API (and the Europeana website) supports the retrieval of a segment of EDM for practical purposes (a subgraph, to use strict terminology). These \"atomic\" EDM segments usually contain one Cultural Heritage Object (CHO), the aggregation information which connects the metadata and the digital representations together and a number of contextual resources such as the agents, places, concepts and time pertaining to the CHO."@en 
       ]
     ],
     [

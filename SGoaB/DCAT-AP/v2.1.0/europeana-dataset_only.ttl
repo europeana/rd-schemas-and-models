@@ -25,8 +25,10 @@
       a dcat:Distribution ;
       dcat:accessURL <http://sparql.europeana.eu/> ;
       dcatap:availability <http://data.europa.eu/r5r/stable>;
-      dct:title "Access to the Europeana dataset via the Europeana SPARQL API"@en ;
+      dct:title "Europeana dataset (SPARQL API)"@en ;
+      dct:description "Metadata gathered by Europeana, searchable via SPARQL. See Data Service and Documentation for further information."@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/SPARQLQ> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.w3.org/TR/sparql11-query/> ;
       adms:status <http://purl.org/adms/status/UnderDevelopment> ;    
       dcat:accessService [
@@ -40,8 +42,10 @@
       a dcat:Distribution ;
       dcat:accessURL <https://api.europeana.eu/oai/record/> ;
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
-      dct:title "Access to the Europeana dataset via the Europeana OAI-PMH service"@en ;
+      dct:title "Europeana dataset (OAI-PMH service)"@en ;
+      dct:description "Metadata gathered by Europeana, harvestable via the OAI-PMH protocol. See Data Service and Documentation for further information."@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/XML> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.openarchives.org/OAI/2.0/> ;
       adms:status <http://purl.org/adms/status/Completed> ;
       dcat:accessService [
@@ -53,38 +57,43 @@
     ],
     [
       a dcat:Distribution ;
-      dcat:accessURL <https://api.europeana.eu/record/v2/search.json> ;
+      dcat:accessURL <https://pro.europeana.eu/page/search> ;
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
-      dct:title "Access to the Europeana dataset via the Europeana Search API"@en ;
+      dct:title "Europeana dataset (Europeana Search API)"@en ;
+      dct:description "Metadata gathered by Europeana, searchable via the Europeana Search API. See Data Service and Documentation for further information on this API."@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
       adms:status <http://purl.org/adms/status/Completed> ;
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <https://api.europeana.eu/record/v2/search.json> ;
         dct:title "Europeana Search API" ;
-        dct:description "The Search API interacts with Europeana's data in much the same way as the Europeana Collections does. You can search for keywords, and the API will return all records that match that keyword. You can refine your search with more advanced queries like Boolean Searches, or you can filter out parts of the results advanced filtering. You can choose to only return objects which have certain copyright statements, and you can choose to return the results in a language of your choice."@en 
+        dct:description "The Search API interacts with Europeana's data in much the same way as the Europeana website does. You can search for keywords, and the API will return all records that match that keyword. You can refine your search with more advanced queries like Boolean Searches, or you can filter out parts of the results with advanced filtering. You can choose to only return objects which have certain copyright statements, and you can choose to return the results in a language of your choice."@en 
       ]
     ],
     [
       a dcat:Distribution ;
-      dcat:accessURL <https://api.europeana.eu/record/> ;
+      dcat:accessURL <https://pro.europeana.eu/page/record> ;
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
-      dct:title "Access to the Europeana dataset via the Europeana Record API"@en ;
+      dct:title "Europeana dataset (Europeana Record API)"@en ;
+      dct:description "Metadata gathered by Europeana, accessible at record-level via the Europeana Record API. See Data Service and Documentation for further information on this API."@en ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/JSON>  ;
       adms:status <http://purl.org/adms/status/Completed> ;
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <https://api.europeana.eu/record/> ;
         dct:title "Europeana Record API" ;
-        dct:description "The Record API provides direct access to the Europeana data, which is modeled using EDM. While EDM is an open flexible data model featuring various kinds of resources and relations between them, the Record API (and the Europeana Collections Portal) supports the retrieval of a segment of EDM for practical purposes (a subgraph, to use strict terminology). These \"atomic\" EDM segments usually contain one Cultural Heritage Object (CHO), the aggregation information which connects the metadata and the digital representations together and a number of contextual resources such as the agents, places, concepts and time pertaining to the CHO."@en 
+        dct:description "The Record API provides direct access to the Europeana data, which is modelled using EDM. While EDM is an open flexible data model featuring various kinds of resources and relations between them, the Record API (and the Europeana website) supports the retrieval of a segment of EDM for practical purposes (a subgraph, to use strict terminology). These \"atomic\" EDM segments usually contain one Cultural Heritage Object (CHO), the aggregation information which connects the metadata and the digital representations together and a number of contextual resources such as the agents, places, concepts and time pertaining to the CHO."@en 
       ]
     ],
     [
       a dcat:Distribution ;
-      dcat:accessURL <ftp://download.europeana.eu/dataset/XML/> ;
+      dcat:accessURL <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> ;
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
-      dct:title "Data dumps of the Europeana dataset in RDF-XML"@en ;
+      dct:title "Europeana dataset (RDF-XML data dumps)"@en ;
+      dct:description "Metadata gathered by Europeana. The complete dataset is available for download in zipped RDF-XML files."@en ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
@@ -94,9 +103,10 @@
     ],
     [
       a dcat:Distribution ;
-      dcat:accessURL <ftp://download.europeana.eu/dataset/TTL/> ;
+      dcat:accessURL <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> ;
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
-      dct:title "Data dumps of the Europeana dataset in RDF Turtle"@en ;
+      dct:title "Europeana dataset (RDF Turtle data dumps)"@en ;
+      dct:description "Metadata gathered by Europeana. The complete dataset is available for download in zipped RDF Turtle files."@en ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
@@ -155,6 +165,22 @@
   a dct:MediaTypeOrExtent ;
   skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
     
+<http://publications.europa.eu/resource/authority/file-type/XML>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .    
+
+<http://publications.europa.eu/resource/authority/file-type/JSON>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://publications.europa.eu/resource/authority/file-type/JSON_LD>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://publications.europa.eu/resource/authority/file-type/SPARQLQ>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+
 <http://publications.europa.eu/resource/authority/data-theme> 
   a skos:ConceptScheme ;
   dct:title "Data theme"@en . 
@@ -222,6 +248,7 @@
   dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
   dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
   dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
 
 
 
