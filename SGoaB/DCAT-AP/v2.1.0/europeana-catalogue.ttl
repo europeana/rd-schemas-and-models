@@ -27,7 +27,7 @@
 <#dataset>  
     a dcat:Dataset ;
     dct:description "A dataset containing metadata descriptions of cultural heritage digital objects from, and about, Europe. The dataset aggregates metadata from more than 4000 cultural heritage institutions."@en ;
-    dct:title "Europeana Aggregated Dataset of Cultural Heritage Digital Objects"@en ;
+    dct:title "Europeana.eu dataset"@en ;
     dct:publisher <http://data.europeana.eu/organization/1482250000001617026> ;
 	dcat:contactPoint <http://data.europeana.eu/organization/1482250000001617026> ;
     dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> ;
