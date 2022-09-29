@@ -1,0 +1,127 @@
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix adms:   <http://www.w3.org/ns/adms> .
+@prefix schema: <http://schema.org/> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix :       <http://data.europeana.eu> .
+
+<https://saintgeorgeonabike.eu/dataset/Rijskmuseum>  
+    a dcat:Dataset ;
+    dct:description "A dataset containing annotations made on images of cultural heritage digital objects from the Rijskmuseum. The annotations resulted from the application of automatic object detection techniques."@en ; 
+    dct:title "Object detection annotations on images from the Rijskmuseum"@en ;
+    dct:publisher <https://saintgeorgeonabike.eu/> ;
+	dcat:contactPoint <http://data.europeana.eu/organization/1482250000001617026> ;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+    dct:creator <https://saintgeorgeonabike.eu/> ;
+    dct:conformsTo <https://www.w3.org/TR/annotation-model/> ;
+    dct:issued "2022-10-01"^^xsd:date ;
+	dct:modified "2022-10-01"^^xsd:date ;
+    dcat:keyword "culture"@en ;
+    foaf:page <https://saintgeorgeonabike.eu/results/dataset/rijskmuseum> ;  
+    dcat:distribution [
+      a dcat:Distribution ;
+      dcat:accessURL <https://saintgeorgeonabike.eu/results/dataset/rijskmuseum> ;
+      dcat:downloadURL <https://saintgeorgeonabike.eu/results/dataset/rijskmuseum/downloads/annotations.zip> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:title "Object detection annotations. (JSON-LD data dumps)"@en ;
+      dct:description "A ZIP archive containing the enrichments (as annotations) automatically created by the SGoaB service for a dataset."@en ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:conformsTo <https://www.w3.org/TR/annotation-model/> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/ld+json> ;
+      dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
+	  dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      adms:status <http://purl.org/adms/status/Completed>
+    ] .
+
+<http://data.europeana.eu/organization/1482250000001617026> 
+  a foaf:Agent , vcard:Kind ;
+  foaf:name "Europeana Foundation"@en, "Stichting Europeana"@nl ;
+  dct:type <http://purl.org/adms/publishertype/NonProfitOrganisation> .
+  
+<https://saintgeorgeonabike.eu/> a foaf:Agent ;
+  foaf:name "Project Saint George on a Bike"@en .
+  
+<http://creativecommons.org/publicdomain/zero/1.0/>
+  a dct:LicenseDocument , dct:RightsStatement;
+  dct:type <http://purl.org/adms/licencetype/PublicDomain> .
+
+<http://purl.org/adms/licencetype/PublicDomain>
+  a skos:Concept ;
+  skos:inScheme <http://purl.org/adms/licencetype/1.0> ;
+  skos:prefLabel "Public domain"@en .
+    
+<http://www.europeana.eu/schemas/edm/>  
+  a dct:Standard .
+  
+<https://www.w3.org/TR/annotation-model/>  
+  a dct:Standard .
+     
+<https://www.iana.org/assignments/media-types/text/turtle>
+  a dct:MediaType .
+  
+<https://www.iana.org/assignments/media-types/application/zip>  
+  a dct:MediaType .
+  
+<https://www.iana.org/assignments/media-types/application/ld+json>  
+  a dct:MediaType .
+  
+<http://www.iana.org/assignments/media-types/text/html>
+  a dct:MediaType .  
+  
+<http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://publications.europa.eu/resource/authority/file-type/HTML>   
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+    
+<http://publications.europa.eu/resource/authority/file-type/JSON_LD>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://publications.europa.eu/resource/authority/data-theme> 
+  a skos:ConceptScheme ;
+  dct:title "Data theme"@en . 
+ 
+<http://publications.europa.eu/resource/authority/data-theme/EDUC>  
+  a skos:Concept ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/data-theme> ;
+  skos:prefLabel "Education"@en . 
+  
+<http://publications.europa.eu/resource/authority/access-right/PUBLIC>
+  a dct:RightsStatement .  
+  
+<http://purl.org/adms/publishertype/NonProfitOrganisation>
+  a skos:Concept ;
+  skos:prefLabel "Non-Profit Organisation"@en ; 
+  skos:inScheme <http://purl.org/adms/publishertype/1.0> .
+  
+<https://saintgeorgeonabike.eu/results/dataset/rijskmuseum>  
+  a foaf:Document ;
+  schema:url "https://saintgeorgeonabike.eu/results/dataset/rijskmuseum" ;
+  dct:title "Instructions for using and downloading the dataset"@en ; 
+  dct:description "Instructions for using and downloading the object detection annotations on images from the Rijskmuseum."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
+<https://pro.europeana.eu/page/edm-documentation>
+  a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/edm-documentation" ;
+  dct:title "Documentation about the Europeana Data Model"@en ; 
+  dct:description "This webpage list all the documentation resources required for creating and using data in the Europeana Data Model format."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
+
+
+
