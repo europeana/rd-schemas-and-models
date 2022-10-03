@@ -29,19 +29,19 @@
     dct:description "A dataset containing metadata descriptions of cultural heritage digital objects from, and about, Europe. The dataset aggregates metadata from more than 4000 cultural heritage institutions."@en ;
     dct:title "Europeana.eu dataset"@en ;
     dct:publisher <http://data.europeana.eu/organization/1482250000001617026> ;
-	dcat:contactPoint <http://data.europeana.eu/organization/1482250000001617026> ;
+    dcat:contactPoint <http://data.europeana.eu/organization/1482250000001617026> ;
     dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> ;
-	dct:temporal [
+    dct:temporal [
 		a dct:PeriodOfTime;
 		dcat:startDate "-542000000"^^xsd:gYear ;
 		dcat:endDate "2022"^^xsd:gYear 
-	] ;
-	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+    ] ;
+    dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
     dct:creator <http://data.europeana.eu/organization/1482250000001617026> ;
     dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
     dct:issued "2008-11-20"^^xsd:date ;
-	dct:modified "2022"^^xsd:gYear ;
+    dct:modified "2022"^^xsd:gYear ;
     dcat:keyword "culture"@en ;
     foaf:page <https://pro.europeana.eu/page/sparql> , <https://pro.europeana.eu/page/oai-pmh-service> , <https://pro.europeana.eu/page/search> , <https://pro.europeana.eu/page/record> , <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> , <https://pro.europeana.eu/page/edm-documentation> ;  
     dcat:distribution [
@@ -55,7 +55,7 @@
       dcat:mediaType <https://www.iana.org/assignments/media-types/text/strings> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.w3.org/TR/sparql11-query/> ;
       adms:status <http://purl.org/adms/status/UnderDevelopment> ;  
-	  dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <http://sparql.europeana.eu/> ;
@@ -74,7 +74,7 @@
       dcat:mediaType <https://www.iana.org/assignments/media-types/application/xml> ;
       dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.openarchives.org/OAI/2.0/> ;
       adms:status <http://purl.org/adms/status/Completed> ;
-	  dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <https://api.europeana.eu/oai/record/> ;
@@ -92,7 +92,7 @@
       dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> ;
       adms:status <http://purl.org/adms/status/Completed> ;
-	  dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <https://api.europeana.eu/record/v2/search.json> ;
@@ -111,7 +111,7 @@
       dct:format <http://publications.europa.eu/resource/authority/file-type/JSON>  ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> ;
       adms:status <http://purl.org/adms/status/Completed> ;
-	  dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <https://api.europeana.eu/record/> ;
@@ -130,7 +130,7 @@
       dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/application/rdf+xml> ;
       dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
-	  dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
       adms:status <http://purl.org/adms/status/Completed>
     ],
     [
@@ -144,7 +144,7 @@
       dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
       dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
-	  dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
       adms:status <http://purl.org/adms/status/Completed>
     ] .
 
