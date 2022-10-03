@@ -15,13 +15,13 @@
     dct:description "A dataset containing annotations made on images of cultural heritage digital objects from the Rijskmuseum. The annotations resulted from the application of automatic object detection techniques."@en ; 
     dct:title "Object detection annotations on images from the Rijskmuseum"@en ;
     dct:publisher <https://saintgeorgeonabike.eu/> ;
-	dcat:contactPoint <http://data.europeana.eu/organization/1482250000001617026> ;
-	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+    dcat:contactPoint <http://data.europeana.eu/organization/1482250000001617026> ;
+    dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
     dct:creator <https://saintgeorgeonabike.eu/> ;
     dct:conformsTo <https://www.w3.org/TR/annotation-model/> ;
     dct:issued "2022-10-01"^^xsd:date ;
-	dct:modified "2022-10-01"^^xsd:date ;
+    dct:modified "2022-10-01"^^xsd:date ;
     dcat:keyword "culture"@en ;
     foaf:page <https://saintgeorgeonabike.eu/results/dataset/rijskmuseum> ;  
     dcat:distribution [
@@ -121,7 +121,4 @@
   dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
   dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
   dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
-
-
-
 
