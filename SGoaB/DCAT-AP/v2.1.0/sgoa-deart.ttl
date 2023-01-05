@@ -1,0 +1,127 @@
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix adms:   <http://www.w3.org/ns/adms> .
+@prefix schema: <http://schema.org/> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix :       <http://data.europeana.eu> .
+
+<https://doi.org/10.5281/zenodo.6984525>  
+    a dcat:Dataset ;
+    dct:description "DEArt is an object detection and pose classification dataset meant to be a reference for paintings between the XIIth and the XVIIIth centuries. It contains more than 15000 images, about 80% non-iconic, aligned with manual annotations for the bounding boxes identifying all instances of 69 classes as well as 12 possible poses for boxes identifying human-like objects. Of these, more than 50 classes are cultural heritage specific and thus do not appear in other datasets; these reflect imaginary beings, symbolic entities and other categories related to art."@en ; 
+    dct:title "DEArt: Dataset of European Art"@en ;
+    dct:publisher <https://saintgeorgeonabike.eu/> ;
+	dcat:contactPoint <https://orcid.org/0000-0003-3257-8512> ;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+    dct:creator <https://orcid.org/0000-0003-3257-8512> ;
+# The DCAT-AP validator is incorrectly allowing only one dct:creator
+#    dct:creator <https://orcid.org/0000-0003-3257-8512> , <https://orcid.org/0000-0002-6978-2974> , <https://orcid.org/0000-0001-5432-0657> ;
+    dct:issued "2022-10-22"^^xsd:date ;
+	dct:modified "2022-10-22"^^xsd:date ;
+    dcat:keyword "Object Detection"@en , "Computer Vision"@en , "Cultural Heritage"@en , "Religious Art"@en  ;	
+    foaf:page <https://zenodo.org/record/6984525> , <https://doi.org/10.48550/arXiv.2211.01226>;  
+    dcat:distribution [
+      a dcat:Distribution ;
+      dcat:accessURL <https://zenodo.org/record/6984525> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:title "Image files and the corresponding annotations."@en ;
+      dct:description "A ZIP archive containing all the annotations in XML, and several additional ZIP archives containing the annotated image files."@en ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/XML> ;
+      dct:license <https://creativecommons.org/licenses/by-nc-sa/2.0/> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/xml> ;
+      dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
+      dcat:compressFormat <https://www.iana.org/assignments/media-types/application/zip> ;
+	  dct:rights <https://creativecommons.org/licenses/by-nc-sa/2.0/> ;
+      adms:status <http://purl.org/adms/status/Completed>
+    ] .
+  
+<https://saintgeorgeonabike.eu/> a foaf:Agent ;
+  foaf:name "Project Saint George on a Bike"@en .
+  
+<https://creativecommons.org/licenses/by-nc-sa/2.0/>
+  a dct:LicenseDocument , dct:RightsStatement;
+  dct:type <http://purl.org/adms/licencetype/Attribution> , <http://purl.org/adms/licencetype/NonCommercialUseOnly>, <http://purl.org/adms/licencetype/ViralEffect-ShareAlike>.
+
+<http://purl.org/adms/licencetype/Attribution>
+  a skos:Concept ;
+  skos:inScheme <http://purl.org/adms/licencetype/1.0> ;
+  skos:prefLabel "Attribution"@en .
+  
+<http://purl.org/adms/licencetype/NonCommercialUseOnly>
+  a skos:Concept ;
+  skos:inScheme <http://purl.org/adms/licencetype/1.0> ;
+  skos:prefLabel "Non-commercial use only"@en .
+  
+<http://purl.org/adms/licencetype/ViralEffect-ShareAlike>
+  a skos:Concept ;
+  skos:inScheme <http://purl.org/adms/licencetype/1.0> ;
+  skos:prefLabel "Viral effect (a.k.a. Share-alike)"@en .
+
+<https://www.iana.org/assignments/media-types/application/zip>  
+  a dct:MediaType .
+  
+<https://www.iana.org/assignments/media-types/application/xml>  
+  a dct:MediaType .
+  
+<http://www.iana.org/assignments/media-types/text/html>
+  a dct:MediaType .  
+  
+<http://publications.europa.eu/resource/authority/data-theme> 
+  a skos:ConceptScheme ;
+  dct:title "Data theme"@en . 
+ 
+<http://publications.europa.eu/resource/authority/data-theme/EDUC>  
+  a skos:Concept ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/data-theme> ;
+  skos:prefLabel "Education"@en . 
+  
+<http://publications.europa.eu/resource/authority/access-right/PUBLIC>
+  a dct:RightsStatement .  
+  
+<http://purl.org/adms/publishertype/NonProfitOrganisation>
+  a skos:Concept ;
+  skos:prefLabel "Non-Profit Organisation"@en ; 
+  skos:inScheme <http://purl.org/adms/publishertype/1.0> .
+  
+<https://doi.org/10.48550/arXiv.2211.01226>  
+  a foaf:Document ;
+  schema:url "https://arxiv.org/pdf/2211.01226.pdf" ;
+  dct:title "Research paper describing the dataset."@en ; 
+  dct:description "A research paper describing the DEArt dataset. It was published in the VISART VI Workshop at the European Conference of Computer Vision (ECCV) in October 2022."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/application/pdf> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
+<http://publications.europa.eu/resource/authority/file-type/XML>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://publications.europa.eu/resource/authority/file-type/PDF>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+  
+<https://zenodo.org/record/6984525>  
+  a foaf:Document ;
+  schema:url "https://zenodo.org/record/6984525" ;
+  dct:title "The dataset landing page at Zenodo."@en ; 
+  dct:description "The landing page the DEArt dataset at Zenodo, where the dataset and its metadata can be accessed."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+    
+<https://orcid.org/0000-0003-3257-8512> 
+  a foaf:Agent , vcard:Kind ;
+  foaf:name "Artem Reshetnikov" .
+
+<https://orcid.org/0000-0002-6978-2974> 
+  a foaf:Agent ;
+  foaf:name "Maria-Cristina Marinescu" .
+
+<https://orcid.org/0000-0001-5432-0657> 
+  a foaf:Agent ;
+  foaf:name "Joaquim More Lopez" .
