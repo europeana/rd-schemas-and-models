@@ -16,6 +16,8 @@
   dct:publisher <http://data.europeana.eu/organization/1482250000001617026> ;
   dct:title "Europeana Datasets"@en ;
   foaf:homepage <https://www.europeana.eu/> ;
+  dcat:contactPoint <http://data.europeana.eu/organization/1482250000001617026> ;
+  dct:language <http://publications.europa.eu/resource/authority/language/ENG>;  
   dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
   dct:issued "2021-03-05"^^xsd:date ;
   dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> ;
@@ -61,8 +63,9 @@
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <https://sparql.europeana.eu/> ;
+		dcat:servesDataset <#dataset> ;
         dct:title "Europeana SPARQL API" ;
-        dct:description "The SPARQL API of Europeana APIs allows exploring connections between Europeana data and outside data sources, like VIAF, Iconclass, Getty Vocabularies (AAT), Geonames, Wikidata, and DBPedia. It allows one to delve into the structured metadata of Europeana (for instance, to ask the question \"What are all the French 18th-century painters with at least five artworks available through Europeana\")"@en 
+        dcat:endpointDescription "The SPARQL API of Europeana APIs allows exploring connections between Europeana data and outside data sources, like VIAF, Iconclass, Getty Vocabularies (AAT), Geonames, Wikidata, and DBPedia. It allows one to delve into the structured metadata of Europeana (for instance, to ask the question \"What are all the French 18th-century painters with at least five artworks available through Europeana\")"@en 
       ]
     ],
     [
@@ -80,8 +83,9 @@
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <https://api.europeana.eu/oai/record/> ;
+		dcat:servesDataset <#dataset> ;
         dct:title "Europeana OAI-PMH Service" ;
-        dct:description "The Europeana OAI-PMH service offers a way to collect large amounts of Europeana data from our repository. The OAI-PMH protocol allows you to harvest the entirety, a selection, or all of Europeana metadata so that it can be integrated into other services or applications."@en 
+        dcat:endpointDescription "The Europeana OAI-PMH service offers a way to collect large amounts of Europeana data from our repository. The OAI-PMH protocol allows you to harvest the entirety, a selection, or all of Europeana metadata so that it can be integrated into other services or applications."@en 
       ]
     ],
     [
@@ -98,8 +102,9 @@
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <https://api.europeana.eu/record/v2/search.json> ;
+		dcat:servesDataset <#dataset> ;
         dct:title "Europeana Search API" ;
-        dct:description "The Search API interacts with Europeana's data in much the same way as the Europeana website does. You can search for keywords, and the API will return all records that match that keyword. You can refine your search with more advanced queries like Boolean Searches, or you can filter out parts of the results with advanced filtering. You can choose to only return objects which have certain copyright statements, and you can choose to return the results in a language of your choice."@en 
+        dcat:endpointDescription "The Search API interacts with Europeana's data in much the same way as the Europeana website does. You can search for keywords, and the API will return all records that match that keyword. You can refine your search with more advanced queries like Boolean Searches, or you can filter out parts of the results with advanced filtering. You can choose to only return objects which have certain copyright statements, and you can choose to return the results in a language of your choice."@en 
       ]
     ],
     [
@@ -117,8 +122,9 @@
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <https://api.europeana.eu/record/> ;
+		dcat:servesDataset <#dataset> ;
         dct:title "Europeana Record API" ;
-        dct:description "The Record API provides direct access to the Europeana data, which is modelled using EDM. While EDM is an open flexible data model featuring various kinds of resources and relations between them, the Record API (and the Europeana website) supports the retrieval of a segment of EDM for practical purposes (a subgraph, to use strict terminology). These \"atomic\" EDM segments usually contain one Cultural Heritage Object (CHO), the aggregation information which connects the metadata and the digital representations together and a number of contextual resources such as the agents, places, concepts and time pertaining to the CHO."@en 
+        dcat:endpointDescription "The Record API provides direct access to the Europeana data, which is modelled using EDM. While EDM is an open flexible data model featuring various kinds of resources and relations between them, the Record API (and the Europeana website) supports the retrieval of a segment of EDM for practical purposes (a subgraph, to use strict terminology). These \"atomic\" EDM segments usually contain one Cultural Heritage Object (CHO), the aggregation information which connects the metadata and the digital representations together and a number of contextual resources such as the agents, places, concepts and time pertaining to the CHO."@en 
       ]
     ],
     [
@@ -137,8 +143,9 @@
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <ftp://download.europeana.eu/dataset/XML/> ;
+		dcat:servesDataset <#dataset> ;
         dct:title "Europeana FTP server" ;
-        dct:description "The FTP server from Europeana makes available compressed zip files containing the metadata of all objects in Europeana's repository for bulk download. These files are generated on Sunday evening each week using our harvesting solution, which guarantees that the data is as up-to-date as possible while making sure our harvesting service is working as expected."@en 
+        dcat:endpointDescription "The FTP server from Europeana makes available compressed zip files containing the metadata of all objects in Europeana's repository for bulk download. These files are generated on Sunday evening each week using our harvesting solution, which guarantees that the data is as up-to-date as possible while making sure our harvesting service is working as expected."@en 
       ]
     ],
     [
@@ -157,8 +164,9 @@
       dcat:accessService [
         a dcat:DataService;
         dcat:endpointURL <ftp://download.europeana.eu/dataset/TTL/> ;
+		dcat:servesDataset <#dataset> ;
         dct:title "Europeana FTP server" ;
-        dct:description "The FTP server from Europeana makes available compressed zip files containing the metadata of all objects in Europeana's repository for bulk download. These files are generated on Sunday evening each week using our harvesting solution, which guarantees that the data is as up-to-date as possible while making sure our harvesting service is working as expected."@en 
+        dcat:endpointDescription "The FTP server from Europeana makes available compressed zip files containing the metadata of all objects in Europeana's repository for bulk download. These files are generated on Sunday evening each week using our harvesting solution, which guarantees that the data is as up-to-date as possible while making sure our harvesting service is working as expected."@en 
       ]
     ] .
 
@@ -248,6 +256,10 @@
 <http://publications.europa.eu/resource/authority/data-theme> 
   a skos:ConceptScheme ;
   dct:title "Data theme"@en . 
+
+<http://publications.europa.eu/resource/authority/language/ENG>
+  a dct:LinguisticSystem ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/language> .
  
 <http://publications.europa.eu/resource/authority/data-theme/EDUC>  
   a skos:Concept ;
