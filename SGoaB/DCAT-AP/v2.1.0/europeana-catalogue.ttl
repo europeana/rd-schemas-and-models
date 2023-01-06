@@ -46,7 +46,7 @@
     foaf:page <https://pro.europeana.eu/page/sparql> , <https://pro.europeana.eu/page/oai-pmh-service> , <https://pro.europeana.eu/page/search> , <https://pro.europeana.eu/page/record> , <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> , <https://pro.europeana.eu/page/edm-documentation> ;  
     dcat:distribution [
       a dcat:Distribution ;
-      dcat:accessURL <http://sparql.europeana.eu/> ;
+      dcat:accessURL <https://sparql.europeana.eu/> ;
       dcatap:availability <http://data.europa.eu/r5r/stable>;
       dct:title "Europeana dataset (SPARQL API)"@en ;
       dct:description "Metadata gathered by Europeana, searchable via SPARQL. See Data Service and Documentation for further information."@en ;
@@ -58,7 +58,7 @@
       dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
       dcat:accessService [
         a dcat:DataService;
-        dcat:endpointURL <http://sparql.europeana.eu/> ;
+        dcat:endpointURL <https://sparql.europeana.eu/> ;
         dct:title "Europeana SPARQL API" ;
         dct:description "The SPARQL API of Europeana APIs allows exploring connections between Europeana data and outside data sources, like VIAF, Iconclass, Getty Vocabularies (AAT), Geonames, Wikidata, and DBPedia. It allows one to delve into the structured metadata of Europeana (for instance, to ask the question \"What are all the French 18th-century painters with at least five artworks available through Europeana\")"@en 
       ]
@@ -131,7 +131,13 @@
       dcat:mediaType <https://www.iana.org/assignments/media-types/application/rdf+xml> ;
       dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
       dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
-      adms:status <http://purl.org/adms/status/Completed>
+      adms:status <http://purl.org/adms/status/Completed> ;  
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <ftp://download.europeana.eu/dataset/XML/> ;
+        dct:title "Europeana FTP server" ;
+        dct:description "The FTP server from Europeana makes available compressed zip files containing the metadata of all objects in Europeana's repository for bulk download. These files are generated on Sunday evening each week using our harvesting solution, which guarantees that the data is as up-to-date as possible while making sure our harvesting service is working as expected."@en 
+      ]
     ],
     [
       a dcat:Distribution ;
@@ -145,7 +151,13 @@
       dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
       dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
       dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
-      adms:status <http://purl.org/adms/status/Completed>
+      adms:status <http://purl.org/adms/status/Completed> ;  
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <ftp://download.europeana.eu/dataset/TTL/> ;
+        dct:title "Europeana FTP server" ;
+        dct:description "The FTP server from Europeana makes available compressed zip files containing the metadata of all objects in Europeana's repository for bulk download. These files are generated on Sunday evening each week using our harvesting solution, which guarantees that the data is as up-to-date as possible while making sure our harvesting service is working as expected."@en 
+      ]
     ] .
 
 <http://data.europeana.eu/organization/1482250000001617026> 
