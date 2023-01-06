@@ -201,7 +201,6 @@
 
 <http://publications.europa.eu/resource/authority/continent/EUROPE>  
   a dct:Location ;
-  dcat:centroid "48°41'27.452\"N, 9°8'26.232\"E" ;
   skos:inScheme <http://publications.europa.eu/resource/authority/continent> .
     
 <https://www.iana.org/assignments/media-types/text/turtle>
