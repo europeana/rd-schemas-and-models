@@ -22,6 +22,8 @@
   dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
   dct:modified "2022-10-01"^^xsd:date ;
   dct:creator <http://data.europeana.eu/organization/1482250000001617026> ;
+  dcat:keyword "culture"@en ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
   dcat:dataset <#dataset> .
 
 <#dataset>  
@@ -176,7 +178,10 @@
   a skos:Concept ;
   skos:inScheme <http://purl.org/adms/licencetype/1.0> ;
   skos:prefLabel "Public domain"@en .
-    
+
+<http://data.europa.eu/r5r/stable>
+  a skos:Concept .
+  
 <http://www.europeana.eu/schemas/edm/>  
   a dct:Standard .
   
@@ -188,6 +193,7 @@
 
 <http://publications.europa.eu/resource/authority/continent/EUROPE>  
   a dct:Location ;
+  dcat:centroid "48°41'27.452\"N, 9°8'26.232\"E" ;
   skos:inScheme <http://publications.europa.eu/resource/authority/continent> .
     
 <https://www.iana.org/assignments/media-types/text/turtle>
