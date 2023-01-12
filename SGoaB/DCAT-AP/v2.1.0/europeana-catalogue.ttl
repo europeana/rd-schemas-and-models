@@ -21,6 +21,11 @@
   dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
   dct:issued "2021-03-05"^^xsd:date ;
   dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> ;
+  dct:temporal [
+		a dct:PeriodOfTime;
+		dcat:startDate "-542000000"^^xsd:gYear ;
+		dcat:endDate "2022"^^xsd:gYear 
+  ] ;
   dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
   dct:modified "2022-10-01"^^xsd:date ;
   dct:creator <http://data.europeana.eu/organization/1482250000001617026> ;
