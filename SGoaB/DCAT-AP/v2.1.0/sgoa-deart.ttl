@@ -69,6 +69,10 @@
   skos:inScheme <http://purl.org/adms/licencetype/1.0> ;
   skos:prefLabel "Viral effect (a.k.a. Share-alike)"@en .
 
+<http://publications.europa.eu/resource/authority/continent/EUROPE>  
+  a dct:Location ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/continent> .
+
 <https://www.iana.org/assignments/media-types/application/zip>  
   a dct:MediaType .
   
