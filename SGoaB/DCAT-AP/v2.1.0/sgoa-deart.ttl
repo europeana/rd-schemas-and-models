@@ -21,6 +21,12 @@
 #    dct:creator <https://orcid.org/0000-0003-3257-8512> ;
 # The DCAT-AP validator is incorrectly allowing only one dct:creator
     dct:creator <https://orcid.org/0000-0003-3257-8512> , <https://orcid.org/0000-0002-6978-2974> , <https://orcid.org/0000-0001-5432-0657> ;
+    dct:temporal [
+		a dct:PeriodOfTime;
+		dcat:startDate "1101"^^xsd:gYear ;
+		dcat:endDate "1800"^^xsd:gYear 
+    ] ;
+    dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> ;
     dct:issued "2022-10-22"^^xsd:date ;
 	dct:modified "2022-10-22"^^xsd:date ;
     dcat:keyword "Object Detection"@en , "Computer Vision"@en , "Cultural Heritage"@en , "Religious Art"@en  ;	
