@@ -198,10 +198,6 @@
   
 <http://www.openarchives.org/OAI/2.0/>
   a dct:Standard .
-
-<http://publications.europa.eu/resource/authority/continent/EUROPE>  
-  a dct:Location ;
-  skos:inScheme <http://publications.europa.eu/resource/authority/continent> .
     
 <https://www.iana.org/assignments/media-types/text/turtle>
   a dct:MediaType .
