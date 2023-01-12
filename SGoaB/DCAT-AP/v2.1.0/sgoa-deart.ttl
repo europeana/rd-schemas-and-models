@@ -18,13 +18,11 @@
 	dcat:contactPoint <https://orcid.org/0000-0003-3257-8512> ;
 	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
-#    dct:creator <https://orcid.org/0000-0003-3257-8512> ;
-# The DCAT-AP validator is incorrectly allowing only one dct:creator
     dct:creator <https://orcid.org/0000-0003-3257-8512> , <https://orcid.org/0000-0002-6978-2974> , <https://orcid.org/0000-0001-5432-0657> ;
     dct:temporal [
 		a dct:PeriodOfTime;
-		dcat:startDate "1101"^^xsd:gYear ;
-		dcat:endDate "1800"^^xsd:gYear 
+		dcat:startDate "1101-01-01"^^xsd:dateTime ;
+		dcat:endDate "1800-12-31"^^xsd:dateTime 
     ] ;
     dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> ;
     dct:issued "2022-10-22"^^xsd:date ;
@@ -68,10 +66,6 @@
   a skos:Concept ;
   skos:inScheme <http://purl.org/adms/licencetype/1.0> ;
   skos:prefLabel "Viral effect (a.k.a. Share-alike)"@en .
-
-<http://publications.europa.eu/resource/authority/continent/EUROPE>  
-  a dct:Location ;
-  skos:inScheme <http://publications.europa.eu/resource/authority/continent> .
 
 <https://www.iana.org/assignments/media-types/application/zip>  
   a dct:MediaType .
