@@ -1,0 +1,433 @@
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix adms:   <http://www.w3.org/ns/adms> .
+@prefix schema: <http://schema.org/> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+
+<http://data.europeana.eu#catalog>
+  a dcat:Catalog ;
+  dct:description "The catalogue of all cultural heritage datasets aggregated by Europeana"@en ;
+  dct:publisher <http://data.europeana.eu/organization/1482250000001617026> ;
+  dct:title "Europeana Datasets"@en ;
+  foaf:homepage <https://www.europeana.eu/> ;
+  dcat:contactPoint <http://data.europeana.eu/organization/1482250000001617026> ;
+  dct:language <http://publications.europa.eu/resource/authority/language/ENG>;  
+  dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+  dct:issued "2021-03-05"^^xsd:date ;
+  dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> ;
+  dct:temporal [
+	a dct:PeriodOfTime;
+	dcat:startDate "-542000000"^^xsd:gYear ;
+	dcat:endDate "2022"^^xsd:gYear 
+  ] ;
+  dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
+  dct:modified "2022-10-01"^^xsd:date ;
+  dct:creator <http://data.europeana.eu/organization/1482250000001617026> ;
+  dcat:keyword "culture"@en ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+  dcat:dataset <http://data.europeana.eu#dataset-europeana> , <https://doi.org/10.5281/zenodo.6984525> .
+
+<http://data.europeana.eu#dataset-europeana>  
+    a dcat:Dataset ;
+    dct:description "A dataset containing metadata descriptions of cultural heritage digital objects from, and about, Europe. The dataset aggregates metadata from more than 4000 cultural heritage institutions."@en ;
+    dct:title "Europeana.eu dataset"@en ;
+    dct:publisher <http://data.europeana.eu/organization/1482250000001617026> ;
+    dcat:contactPoint <http://data.europeana.eu/organization/1482250000001617026> ;
+    dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> ;
+    dct:temporal [
+		a dct:PeriodOfTime;
+		dcat:startDate "-542000000"^^xsd:gYear ;
+		dcat:endDate "2022"^^xsd:gYear 
+    ] ;
+    dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+    dct:creator <http://data.europeana.eu/organization/1482250000001617026> ;
+    dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
+    dct:issued "2008-11-20"^^xsd:date ;
+    dct:modified "2022"^^xsd:gYear ;
+    dcat:keyword "culture"@en ;
+    foaf:page <https://pro.europeana.eu/page/sparql> , <https://pro.europeana.eu/page/harvesting-and-downloads#harvesting> , <https://pro.europeana.eu/page/search> , <https://pro.europeana.eu/page/record> , <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> , <https://pro.europeana.eu/page/edm-documentation> ;  
+    dcat:distribution [
+      a dcat:Distribution ;
+      dcat:accessURL <https://sparql.europeana.eu/> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable>;
+      dct:title "Europeana dataset (SPARQL API)"@en ;
+      dct:description "Metadata gathered by Europeana, searchable via SPARQL. See Data Service and Documentation for further information."@en ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/SPARQLQ> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/text/strings> ;
+      dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.w3.org/TR/sparql11-query/> ;
+      adms:status <http://purl.org/adms/status/UnderDevelopment> ;  
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <https://sparql.europeana.eu/> ;
+		dcat:servesDataset <http://data.europeana.eu#dataset-europeana> ;
+        dct:title "Europeana SPARQL API" ;
+		dcat:endpointDescription <https://pro.europeana.eu/page/sparql> ;
+        dct:description "The SPARQL API of Europeana APIs allows exploring connections between Europeana data and outside data sources, like VIAF, Iconclass, Getty Vocabularies (AAT), Geonames, Wikidata, and DBPedia. It allows one to delve into the structured metadata of Europeana (for instance, to ask the question \"What are all the French 18th-century painters with at least five artworks available through Europeana\")"@en 
+      ]
+    ],
+    [
+      a dcat:Distribution ;
+      dcat:accessURL <https://pro.europeana.eu/page/harvesting-and-downloads#harvesting> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:title "Europeana dataset (OAI-PMH service)"@en ;
+      dct:description "Metadata gathered by Europeana, harvestable via the OAI-PMH protocol. See Data Service and Documentation for further information."@en ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/XML> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/xml> ;
+      dct:conformsTo <http://www.europeana.eu/schemas/edm/>, <http://www.openarchives.org/OAI/2.0/> ;
+      adms:status <http://purl.org/adms/status/Completed> ;
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <https://api.europeana.eu/oai/record/> ;
+		dcat:servesDataset <http://data.europeana.eu#dataset-europeana> ;
+        dct:title "Europeana OAI-PMH Service" ;
+		dcat:endpointDescription <https://pro.europeana.eu/page/harvesting-and-downloads#harvesting> ;
+        dct:description "The Europeana OAI-PMH service offers a way to collect large amounts of Europeana data from our repository. The OAI-PMH protocol allows you to harvest the entirety, a selection, or all of Europeana metadata so that it can be integrated into other services or applications."@en 
+      ]
+    ],
+    [
+      a dcat:Distribution ;
+      dcat:accessURL <https://pro.europeana.eu/page/search> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:title "Europeana dataset (Europeana Search API)"@en ;
+      dct:description "Metadata gathered by Europeana, searchable via the Europeana Search API. See Data Service and Documentation for further information on this API."@en ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> ;
+      adms:status <http://purl.org/adms/status/Completed> ;
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <https://api.europeana.eu/record/v2/search.json> ;
+		dcat:servesDataset <http://data.europeana.eu#dataset-europeana> ;
+        dct:title "Europeana Search API" ;
+        dcat:endpointDescription <https://pro.europeana.eu/page/search> ;
+        dct:description "The Search API interacts with Europeana's data in much the same way as the Europeana website does. You can search for keywords, and the API will return all records that match that keyword. You can refine your search with more advanced queries like Boolean Searches, or you can filter out parts of the results with advanced filtering. You can choose to only return objects which have certain copyright statements, and you can choose to return the results in a language of your choice."@en 
+      ]
+    ],
+    [
+      a dcat:Distribution ;
+      dcat:accessURL <https://pro.europeana.eu/page/record> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:title "Europeana dataset (Europeana Record API)"@en ;
+      dct:description "Metadata gathered by Europeana, accessible at record-level via the Europeana Record API. See Data Service and Documentation for further information on this API."@en ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/JSON>  ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> ;
+      adms:status <http://purl.org/adms/status/Completed> ;
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <https://api.europeana.eu/record/> ;
+		dcat:servesDataset <http://data.europeana.eu#dataset-europeana> ;
+        dct:title "Europeana Record API" ;
+        dcat:endpointDescription <https://pro.europeana.eu/page/record> ;
+        dct:description "The Record API provides direct access to the Europeana data, which is modelled using EDM. While EDM is an open flexible data model featuring various kinds of resources and relations between them, the Record API (and the Europeana website) supports the retrieval of a segment of EDM for practical purposes (a subgraph, to use strict terminology). These \"atomic\" EDM segments usually contain one Cultural Heritage Object (CHO), the aggregation information which connects the metadata and the digital representations together and a number of contextual resources such as the agents, places, concepts and time pertaining to the CHO."@en 
+      ]
+    ],
+    [
+      a dcat:Distribution ;
+      dcat:accessURL <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:title "Europeana dataset (RDF-XML data dumps)"@en ;
+      dct:description "Metadata gathered by Europeana. The complete dataset is available for download in zipped RDF-XML files."@en ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/rdf+xml> ;
+      dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      adms:status <http://purl.org/adms/status/Completed> ;  
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <ftp://download.europeana.eu/dataset/XML/> ;
+		dcat:servesDataset <http://data.europeana.eu#dataset-europeana> ;
+        dct:title "Europeana FTP server" ;
+        dcat:endpointDescription <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> ;
+        dct:description "The FTP server from Europeana makes available compressed zip files containing the metadata of all objects in Europeana's repository for bulk download. These files are generated on Sunday evening each week using our harvesting solution, which guarantees that the data is as up-to-date as possible while making sure our harvesting service is working as expected."@en 
+      ]
+    ],
+    [
+      a dcat:Distribution ;
+      dcat:accessURL <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:title "Europeana dataset (RDF Turtle data dumps)"@en ;
+      dct:description "Metadata gathered by Europeana. The complete dataset is available for download in zipped RDF Turtle files."@en ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:conformsTo <http://www.europeana.eu/schemas/edm/> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
+      dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      adms:status <http://purl.org/adms/status/Completed> ;  
+      dcat:accessService [
+        a dcat:DataService;
+        dcat:endpointURL <ftp://download.europeana.eu/dataset/TTL/> ;
+		dcat:servesDataset <http://data.europeana.eu#dataset-europeana> ;
+        dct:title "Europeana FTP server" ;
+        dcat:endpointDescription <https://pro.europeana.eu/page/harvesting-and-downloads#downloads> ;
+        dct:description "The FTP server from Europeana makes available compressed zip files containing the metadata of all objects in Europeana's repository for bulk download. These files are generated on Sunday evening each week using our harvesting solution, which guarantees that the data is as up-to-date as possible while making sure our harvesting service is working as expected."@en 
+      ]
+    ] .
+
+<http://data.europeana.eu/organization/1482250000001617026> 
+  a foaf:Agent , vcard:Kind ;
+  foaf:name "Europeana Foundation"@en, "Stichting Europeana"@nl ;
+  dct:type <http://purl.org/adms/publishertype/NonProfitOrganisation> .
+
+<http://creativecommons.org/publicdomain/zero/1.0/>
+  a dct:LicenseDocument , dct:RightsStatement;
+  dct:type <http://purl.org/adms/licencetype/PublicDomain> .
+  
+<http://publications.europa.eu/resource/authority/access-right/PUBLIC>
+  a dct:RightsStatement .
+
+<http://purl.org/adms/licencetype/PublicDomain>
+  a skos:Concept ;
+  skos:inScheme <http://purl.org/adms/licencetype/1.0> ;
+  skos:prefLabel "Public domain"@en .
+
+<http://data.europa.eu/r5r/stable>
+  a skos:Concept .
+  
+<http://www.europeana.eu/schemas/edm/>  
+  a dct:Standard .
+  
+<http://www.w3.org/TR/sparql11-query/>  
+  a dct:Standard .
+  
+<http://www.openarchives.org/OAI/2.0/>
+  a dct:Standard .
+    
+<https://www.iana.org/assignments/media-types/text/turtle>
+  a dct:MediaType .
+  
+<https://www.iana.org/assignments/media-types/application/xml>  
+  a dct:MediaType .
+  
+<https://www.iana.org/assignments/media-types/application/zip>  
+  a dct:MediaType .
+
+<https://www.iana.org/assignments/media-types/application/json>  
+  a dct:MediaType .
+  
+<https://www.iana.org/assignments/media-types/text/strings>  
+  a dct:MediaType .
+  
+<https://www.iana.org/assignments/media-types/application/rdf+xml>
+  a dct:MediaType .
+  
+<http://www.iana.org/assignments/media-types/text/html>
+  a dct:MediaType .  
+  
+<http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://publications.europa.eu/resource/authority/file-type/RDF_XML>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+  
+<http://publications.europa.eu/resource/authority/file-type/HTML>   
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+    
+<http://publications.europa.eu/resource/authority/file-type/XML>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .    
+
+<http://publications.europa.eu/resource/authority/file-type/JSON>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://publications.europa.eu/resource/authority/file-type/JSON_LD>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://publications.europa.eu/resource/authority/file-type/SPARQLQ>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+
+<http://publications.europa.eu/resource/authority/data-theme> 
+  a skos:ConceptScheme ;
+  dct:title "Data theme"@en . 
+
+<http://publications.europa.eu/resource/authority/language/ENG>
+  a dct:LinguisticSystem ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/language> .
+ 
+<http://publications.europa.eu/resource/authority/data-theme/EDUC>  
+  a skos:Concept ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/data-theme> ;
+  skos:prefLabel "Education"@en . 
+  
+<http://purl.org/adms/publishertype/NonProfitOrganisation>
+  a skos:Concept ;
+  skos:prefLabel "Non-Profit Organisation"@en ; 
+  skos:inScheme <http://purl.org/adms/publishertype/1.0> .
+  
+<https://www.europeana.eu/>  
+  a foaf:Document .  
+  
+<https://pro.europeana.eu/page/sparql>   
+  a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/sparql" ;
+  dct:title "Documentation of the Europeana SPARQL API"@en ; 
+  dct:description "The SPARQL API is different from the other Europeana APIs in that it allows you to explore connections between Europeana data and outside data sources, like VIAF, Iconclass, Getty Vocabularies (AAT), Geonames, Wikidata, and DBPedia. If you are looking for a way to delve into the structured metadata of Europeana (for instance, to ask the question 'What are all the French 18th-century painters with at least five artworks available through Europeana'), this is the API for you."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
+<https://pro.europeana.eu/page/record>  
+  a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/record" ;
+  dct:title "Documentation of the Europeana Record API"@en ; 
+  dct:description "Description of the requests and responses of Europeana Record API. This API supports 3 serialization formats: JSON, JSON-LD and RDF/XML."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
+<https://pro.europeana.eu/page/search>
+  a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/search" ;
+  dct:title "Documentation of the Europeana Search API"@en ; 
+  dct:description "Description of the requests and responses of the JSON-based Europeana Search API."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
+<https://pro.europeana.eu/page/harvesting-and-downloads#harvesting>
+  a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/oai-pmh-service" ;
+  dct:title "Documentation of the Europeana OAI-PMH API"@en ; 
+  dct:description "Instructions for harvesting the entirety, or a selection per dataset, or date of creation/modification, of all Europeana metadata, using the OAI-PMH protocol."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+  
+<https://pro.europeana.eu/page/harvesting-and-downloads#downloads>  
+  a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/harvesting-and-downloads#downloads" ;
+  dct:title "Instructions for downloading the Europeana dataset"@en ; 
+  dct:description "Instruction for accessing the repository containing bulk file exports of the Europeana dataset."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
+<https://pro.europeana.eu/page/edm-documentation>
+  a foaf:Document ;
+  schema:url "https://pro.europeana.eu/page/edm-documentation" ;
+  dct:title "Documentation about the Europeana Data Model"@en ; 
+  dct:description "This webpage list all the documentation resources required for creating and using data in the Europeana Data Model format."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
+<https://doi.org/10.5281/zenodo.6984525>  
+    a dcat:Dataset ;
+    dct:description "DEArt is an object detection and pose classification dataset meant to be a reference for paintings between the XIIth and the XVIIIth centuries. It contains more than 15000 images, about 80% non-iconic, aligned with manual annotations for the bounding boxes identifying all instances of 69 classes as well as 12 possible poses for boxes identifying human-like objects. Of these, more than 50 classes are cultural heritage specific and thus do not appear in other datasets; these reflect imaginary beings, symbolic entities and other categories related to art."@en ; 
+    dct:title "DEArt: Dataset of European Art"@en ;
+    dct:publisher <https://saintgeorgeonabike.eu/> ;
+	dcat:contactPoint <https://orcid.org/0000-0003-3257-8512> ;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+    dct:creator <https://orcid.org/0000-0003-3257-8512> , <https://orcid.org/0000-0002-6978-2974> , <https://orcid.org/0000-0001-5432-0657> ;
+    dct:temporal [
+		a dct:PeriodOfTime;
+		dcat:startDate "1101-01-01"^^xsd:date ;
+		dcat:endDate "1800-12-31"^^xsd:date 
+    ] ;
+    dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> ;
+    dct:issued "2022-10-22"^^xsd:date ;
+	dct:modified "2022-10-22"^^xsd:date ;
+    dcat:keyword "Object Detection"@en , "Computer Vision"@en , "Cultural Heritage"@en , "Religious Art"@en  ;	
+    foaf:page <https://zenodo.org/record/6984525> , <https://doi.org/10.48550/arXiv.2211.01226>;  
+    dcat:distribution [
+      a dcat:Distribution ;
+      dcat:accessURL <https://zenodo.org/record/6984525> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:title "Image files and the corresponding annotations."@en ;
+      dct:description "A ZIP archive containing all the annotations in XML, and several additional ZIP archives containing the annotated image files."@en ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/XML> ;
+      dct:license <https://creativecommons.org/licenses/by-nc-sa/2.0/> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/xml> ;
+      dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
+      dcat:compressFormat <https://www.iana.org/assignments/media-types/application/zip> ;
+	  dct:rights <https://creativecommons.org/licenses/by-nc-sa/2.0/> ;
+      adms:status <http://purl.org/adms/status/Completed>
+    ] .
+  
+<https://saintgeorgeonabike.eu/> a foaf:Agent ;
+  dct:type <http://purl.org/adms/publishertype/NonProfitOrganisation> ;
+  foaf:name "Project Saint George on a Bike"@en .
+  
+    
+<https://creativecommons.org/licenses/by-nc-sa/2.0/>
+  a dct:LicenseDocument , dct:RightsStatement;
+  dct:type <http://purl.org/adms/licencetype/Attribution> , <http://purl.org/adms/licencetype/NonCommercialUseOnly>, <http://purl.org/adms/licencetype/ViralEffect-ShareAlike>.
+  
+<http://purl.org/adms/licencetype/Attribution>
+  a skos:Concept ;
+  skos:inScheme <http://purl.org/adms/licencetype/1.0> ;
+  skos:prefLabel "Attribution"@en .
+  
+<http://purl.org/adms/licencetype/NonCommercialUseOnly>
+  a skos:Concept ;
+  skos:inScheme <http://purl.org/adms/licencetype/1.0> ;
+  skos:prefLabel "Non-commercial use only"@en .
+  
+<http://purl.org/adms/licencetype/ViralEffect-ShareAlike>
+  a skos:Concept ;
+  skos:inScheme <http://purl.org/adms/licencetype/1.0> ;
+  skos:prefLabel "Viral effect (a.k.a. Share-alike)"@en .
+  
+<https://doi.org/10.48550/arXiv.2211.01226>  
+  a foaf:Document ;
+  schema:url "https://arxiv.org/pdf/2211.01226.pdf" ;
+  dct:title "Research paper describing the dataset."@en ; 
+  dct:description "A research paper describing the DEArt dataset. It was published in the VISART VI Workshop at the European Conference of Computer Vision (ECCV) in October 2022."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/application/pdf> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+
+<http://publications.europa.eu/resource/authority/file-type/PDF>
+  a dct:MediaTypeOrExtent ;
+  skos:inScheme <http://publications.europa.eu/resource/authority/file-type> .
+  
+<https://zenodo.org/record/6984525>  
+  a foaf:Document ;
+  schema:url "https://zenodo.org/record/6984525" ;
+  dct:title "The dataset landing page at Zenodo."@en ; 
+  dct:description "The landing page the DEArt dataset at Zenodo, where the dataset and its metadata can be accessed."@en ; 
+  dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/text/html> ;
+  dct:type <http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN> .
+    
+<https://orcid.org/0000-0003-3257-8512> 
+  a foaf:Agent , vcard:Kind ;
+  dct:type <http://purl.org/adms/publishertype/PrivateIndividual(s)> ;
+  foaf:name "Artem Reshetnikov" .
+
+<https://orcid.org/0000-0002-6978-2974> 
+  a foaf:Agent ;
+  dct:type <http://purl.org/adms/publishertype/PrivateIndividual(s)> ;
+  foaf:name "Maria-Cristina Marinescu" .
+
+<https://orcid.org/0000-0001-5432-0657> 
+  a foaf:Agent ;
+  dct:type <http://purl.org/adms/publishertype/PrivateIndividual(s)> ;
+  foaf:name "Joaquim More Lopez" .
+  
+  
+  
+  
