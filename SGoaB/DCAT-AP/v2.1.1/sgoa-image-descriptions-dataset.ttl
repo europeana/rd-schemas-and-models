@@ -10,7 +10,7 @@
 
 <https://saintgeorgeonabike.eu#image-descriptions-dataset>  
     a dcat:Dataset ;
-    dct:description "This dataset contains crowdsourced image descriptions for 7543 images from the DEArt dataset. There are 4-5 descriptions per image, provided by volunteers of the Zooniverse crowdsourcing platform. You can access the guidelines we used at ....(maybe the zooniverse guidelines directly, or post them somewhere, not sure).  We are in debt with all the volunteers, and in particular with Samantha Blickha, for making this possible. The dataset is a ZIP file containg the CSV file of descriptions and images."@en ; 
+    dct:description "This dataset contains crowdsourced image descriptions for 7543 images from the DEArt dataset. There are 4-5 descriptions per image, provided by volunteers of the Zooniverse crowdsourcing platform. The guidelines we used, together with some example of possible captions, are also published here.  We are in debt with all the Zooniverse volunteers and coordinators, and in particular with Samantha Blickhan, for making this possible. The dataset is a ZIP file containg the CSV file of descriptions and images."@en ; 
     dct:title "Image descriptions for 7543 of the DEArt images, obtained via the Zooniverse crowdsourcing platform"@en ;
     dct:publisher <https://saintgeorgeonabike.eu/> ;
 	dcat:contactPoint <https://saintgeorgeonabike.eu/> ;
