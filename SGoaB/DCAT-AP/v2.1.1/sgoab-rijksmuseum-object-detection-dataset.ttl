@@ -20,8 +20,8 @@
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
     dct:creator <https://saintgeorgeonabike.eu/> ;
     dct:conformsTo <https://www.w3.org/TR/annotation-model/> ;
-    dct:issued "2023-02-01"^^xsd:date ;
-    dct:modified "2022-02-01"^^xsd:date ;
+    dct:issued "2023-02-28"^^xsd:date ;
+    dct:modified "2023-02-28"^^xsd:date ;
     dcat:keyword "culture"@en ;
 	foaf:page <https://zenodo.org/record/7588496> ;  
     dcat:distribution [
