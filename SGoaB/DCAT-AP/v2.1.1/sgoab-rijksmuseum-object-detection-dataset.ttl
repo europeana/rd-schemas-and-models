@@ -8,8 +8,6 @@
 @prefix dcatap: <http://data.europa.eu/r5r/> .
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 
-@prefix :       <http://data.europeana.eu> .
-
 <https://doi.org/10.5281/zenodo.7588496>  
     a dcat:Dataset ;
     dct:description "A dataset containing annotations made on images of cultural heritage digital objects from the Rijskmuseum. The annotations resulted from the application of automatic object detection techniques."@en ; 
@@ -23,7 +21,7 @@
     dct:issued "2023-02-28"^^xsd:date ;
     dct:modified "2023-02-28"^^xsd:date ;
     dcat:keyword "culture"@en ;
-	foaf:page <https://zenodo.org/record/7588496> ;  
+    foaf:page <https://zenodo.org/record/7588496> ;  
     dcat:distribution [
       a dcat:Distribution ;
       dcat:accessURL <https://zenodo.org/record/7588496> ;
