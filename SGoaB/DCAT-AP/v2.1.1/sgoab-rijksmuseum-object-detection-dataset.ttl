@@ -33,7 +33,7 @@
       dct:conformsTo <https://www.w3.org/TR/annotation-model/> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/application/ld+json> ;
       dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
-	  dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
       adms:status <http://purl.org/adms/status/Completed>
     ] .
 
