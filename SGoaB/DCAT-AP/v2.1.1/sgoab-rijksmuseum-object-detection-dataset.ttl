@@ -10,7 +10,7 @@
 
 <https://doi.org/10.5281/zenodo.7588496>  
     a dcat:Dataset ;
-    dct:description "A dataset containing annotations made on images of cultural heritage digital objects from the Rijskmuseum. The annotations resulted from the application of automatic object detection techniques. This dataset was used for the evaluation of the object detection detection model developed by the project Saint George on a Bike. The service achieve an precision of 79.4% and a recall of 65.7% in this dataset."@en ; 
+    dct:description "A dataset containing annotations made on images of cultural heritage digital objects from the Rijskmuseum. The annotations resulted from the application of automatic object detection techniques. This dataset was used for the evaluation of the object detection model developed by the project Saint George on a Bike. The service achieve an precision of 79.4% and a recall of 65.7% in this dataset."@en ; 
     dct:title "Object detection annotations on images from the Rijskmuseum"@en ;
     dct:publisher <https://saintgeorgeonabike.eu/> ;
     dcat:contactPoint <https://saintgeorgeonabike.eu/> ;
