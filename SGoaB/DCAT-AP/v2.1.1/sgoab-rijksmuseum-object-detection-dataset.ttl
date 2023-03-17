@@ -10,7 +10,7 @@
 
 <https://doi.org/10.5281/zenodo.7588496>  
     a dcat:Dataset ;
-    dct:description "A dataset containing annotations made on images of cultural heritage digital objects from the Rijskmuseum. The annotations resulted from the application of automatic object detection techniques."@en ; 
+    dct:description "A dataset containing annotations made on images of cultural heritage digital objects from the Rijskmuseum. The annotations resulted from the application of automatic object detection techniques. This dataset was used for the evaluation of the object detection detection model developed by the project Saint George on a Bike. The service achieve an precision of 79.4% and a recall of 65.7% in this dataset."@en ; 
     dct:title "Object detection annotations on images from the Rijskmuseum"@en ;
     dct:publisher <https://saintgeorgeonabike.eu/> ;
     dcat:contactPoint <https://saintgeorgeonabike.eu/> ;
@@ -26,8 +26,22 @@
       a dcat:Distribution ;
       dcat:accessURL <https://zenodo.org/record/7588496> ;
       dcatap:availability <http://data.europa.eu/r5r/stable> ;
-      dct:title "Object detection annotations. (JSON-LD data dumps)"@en ;
-      dct:description "A ZIP archive containing the enrichments (as annotations) automatically created by the object detection service of SGoaB."@en ;
+      dct:title "Object detection annotations. (JSON-LD data dump)"@en ;
+      dct:description "A ZIP archive containing the enrichments (as annotations) created by the SGoaB project. It contains 792 annotations on 315 images."@en ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+      dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+      dct:conformsTo <https://www.w3.org/TR/annotation-model/> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/ld+json> ;
+      dcat:packageFormat <https://www.iana.org/assignments/media-types/application/zip> ;
+      dct:rights <http://creativecommons.org/publicdomain/zero/1.0/> ;  
+      adms:status <http://purl.org/adms/status/Completed>
+    ] ,
+    [
+      a dcat:Distribution ;
+      dcat:accessURL <https://zenodo.org/record/7588496> ;
+      dcatap:availability <http://data.europa.eu/r5r/stable> ;
+      dct:title "Human-validated object detection annotations. (JSON-LD data dump)"@en ;
+      dct:description "A ZIP archive containing the enrichments (as annotations) created by the SGoaB project. This data dump includes only the subset of the annotations that were considered correct after human validation. It contains 506 annotations on 283 images."@en ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
       dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
       dct:conformsTo <https://www.w3.org/TR/annotation-model/> ;
